@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rpc_id: 1
+  sender: MyString
+  statuscode: 1
+  statusmsg: MyString
+  data: MyText
+
+two:
+  rpc_id: 1
+  sender: MyString
+  statuscode: 1
+  statusmsg: MyString
+  data: MyText

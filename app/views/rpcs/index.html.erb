@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rpcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent</th>
+      <th>Action</th>
+      <th>Timeout</th>
+      <th>Discovery timeout</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rpcs.each do |rpc| %>
+      <tr>
+        <td><%= rpc.agent %></td>
+        <td><%= rpc.action %></td>
+        <td><%= rpc.timeout %></td>
+        <td><%= rpc.discovery_timeout %></td>
+        <td><%= link_to 'Show', rpc %></td>
+        <td><%= link_to 'Edit', edit_rpc_path(rpc) %></td>
+        <td><%= link_to 'Destroy', rpc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rpc', new_rpc_path %>

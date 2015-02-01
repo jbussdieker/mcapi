@@ -11,6 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150201201418) do
+
+  create_table "rpc_results", force: :cascade do |t|
+    t.integer  "rpc_id",     limit: 4
+    t.string   "sender",     limit: 255
+    t.integer  "statuscode", limit: 4
+    t.string   "statusmsg",  limit: 255
+    t.text     "data",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "rpcs", force: :cascade do |t|
+    t.string   "agent",             limit: 255
+    t.string   "action",            limit: 255
+    t.integer  "timeout",           limit: 4
+    t.integer  "discovery_timeout", limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
 end
